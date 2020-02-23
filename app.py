@@ -243,7 +243,7 @@ def edit_artist_submission(artist_id):
     setattr(artist_query, 'genres', request.form.get('genres'))
     setattr(artist_query, 'city', request.form.get('city'))
     setattr(artist_query, 'state', request.form.get('state'))
-    setattr(artist_query, 'phone', request.form.get('phone'))
+    setattr(artist_query, 'phone', request.form.get('phone'))  # TODO: replace with real data returned from querying the database
     setattr(artist_query, 'facebook_link', request.form.get('facebook_link'))
     Artist.update(artist_query)
     return redirect(url_for('show_artist', artist_id=artist_id))
